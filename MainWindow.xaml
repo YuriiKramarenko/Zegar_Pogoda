@@ -1,0 +1,14 @@
+<Window x:Class="Zegar_Pogoda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Zegar_Pogoda"
+        Title="Zegar" Height="520" Width="640" MinHeight="320" MinWidth="420">
+    <TabControl>
+        <TabItem Header="Etap 1 - Zegar">
+            <local:Etap1View/>
+        </TabItem>
+        <TabItem Header="Etap 2 - Pogoda">
+            <local:Etap2View/>
+        </TabItem>
+    </TabControl>
+</Window>

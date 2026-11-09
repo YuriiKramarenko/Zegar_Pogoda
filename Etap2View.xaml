@@ -1,0 +1,41 @@
+<UserControl x:Class="Zegar_Pogoda.Etap2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtGodzina" Grid.Row="0"
+                   FontSize="44" FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+                    HorizontalAlignment="Center" Margin="0,8">
+            <Button Content="Pogoda: Warszawa" Padding="12,6" Margin="4"
+                    Tag="https://api.open-meteo.com/v1/forecast?latitude=52.2297&amp;longitude=21.0122&amp;current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code&amp;timezone=Europe/Warsaw"
+                    Click="BtnPogoda_Click"/>
+            <Button Content="Pogoda: Kraków" Padding="12,6" Margin="4"
+                    Tag="https://api.open-meteo.com/v1/forecast?latitude=50.0647&amp;longitude=19.9450&amp;current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code&amp;timezone=Europe/Warsaw"
+                    Click="BtnPogoda_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="0"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled">
+                <TextBlock x:Name="txtWynik" TextWrapping="Wrap"/>
+            </ScrollViewer>
+
+            <TextBlock x:Name="txtPobrano" Grid.Row="1" Margin="0,6,0,0"/>
+        </Grid>
+    </Grid>
+</UserControl>

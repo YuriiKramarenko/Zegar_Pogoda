@@ -1,0 +1,19 @@
+<UserControl x:Class="Zegar_Pogoda.Etap1View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtGodzina" Grid.Row="0"
+                   FontSize="64" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock x:Name="txtData" Grid.Row="1"
+                   FontSize="28" TextWrapping="Wrap" TextAlignment="Center"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>
